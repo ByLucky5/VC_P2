@@ -4,7 +4,7 @@ Práctica realizada por el grupo 15 (Lucía Motas Guedes y Raúl Marrero Maricha
 
 ## Ejercicio 1
 
-Se comienza partiendo de la imagen _[mandril.jpg](https://github.com/ByLucky5/VC_P1/blob/main/mandril.jpg)_ convertida a escala de grises.
+Se comienza partiendo de la imagen _[mandril.jpg](https://github.com/ByLucky5/VC_P2/blob/main/mandril.jpg)_ convertida a escala de grises.
 
 Primero obtenemos los contornos con el operador de Canny. Luego realizamos la cuenta de píxeles blancos, por fila y finalmente calculamos el valor máximo de píxeles blancos para filas, maxfil, mostrando el número de filas y sus respectivas posiciones, con un número de píxeles blancos mayor o igual que 0.90*maxfil.
 
@@ -24,10 +24,8 @@ En el tercer ejercicio, implementamos un demostrador que nos permite exhibir lo 
 
 ## Ejercicio 4
 
-Para el cuarto ejercicio, se obtiene...
+Para el cuarto ejercicio, se aplica un sustractor de fondo MOG2, sobre el vídeo en tiempo real, el cual permite diferenciar las regiones en movimiento del fondo estático de la escena.
 
-Luego...
-
-Además, este proceso se lleva a cabo y se actualiza en tiempo real sobre una entrada de vídeo.
+Luego, a partir de la máscara resultante, se genera un overlay en color rojo semitransparente que resalta aquellas zonas donde se ha detectado movimiento. Para reforzar la interpretación, se añade un mensaje de advertencia “WARNING: Movimiento detectado” cuando el área del contorno encontrado supera un umbral mínimo, de modo que se ignoren variaciones pequeñas o ruido.
 
 ### Fuentes consultadas
